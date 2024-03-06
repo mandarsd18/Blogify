@@ -10,7 +10,7 @@ const DetailPage = () => {
   const { id } = useParams();
   const navigate=useNavigate()
   const singleBlog = async () => {
-    const res = await axios.get(`http://localhost:4000/blogs/${id}`);
+    const res = await axios.get(`https://blogify-ioe8.onrender.com/blogs/${id}`);
 
     setData(res.data.singleBlog);
   };
