@@ -10,7 +10,7 @@ const BannerSlider = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await axois.get("http://localhost:4000/blogs/allBlogs");
+      const res = await axois.get("https://blogify-ioe8.onrender.com/blogs/allBlogs");
       setData(res?.data?.allblog);
     };
 

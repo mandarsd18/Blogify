@@ -22,12 +22,12 @@ const CardsSection = () => {
   const nav = useNavigate();
 // const {setUiChange,uiChange}=useContext(blogContext)
   const getData = async () => {
-    const res = await axois.get("http://localhost:4000/blogs/allBlogs");
+    const res = await axois.get("https://blogify-ioe8.onrender.com/blogs/allBlogs");
     setData(res?.data?.allblog);
   };
 
   const deleteItem = async(id) => {
-    await axios.delete(`http://localhost:4000/blogs/delete-blog/${id}`);
+    await axios.delete(`https://blogify-ioe8.onrender.com/blogs/delete-blog/${id}`);
     setUiChange((prevState)=>!prevState)
     toast.success('Blog Deleted Successfully !!', {
       position: "top-right",

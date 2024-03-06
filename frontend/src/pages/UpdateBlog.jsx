@@ -21,7 +21,7 @@ const {id}=useParams()
 
   const updateBlog = (e) => {
     e.preventDefault();
-    axios.patch(`http://localhost:4000/blogs/update-blog/${id}`,{
+    axios.patch(`https://blogify-ioe8.onrender.com/blogs/update-blog/${id}`,{
         title: title,
             description: description,
             category: category,
@@ -48,7 +48,7 @@ const {id}=useParams()
   };
 
   const getBlog=async()=>{
-    const res=await axios.get(`http://localhost:4000/blogs/${id}`).then((res)=>res.data.singleBlog)
+    const res=await axios.get(`https://blogify-ioe8.onrender.com/blogs/${id}`).then((res)=>res.data.singleBlog)
     console.log(res)
     setTitle(res.title)
     setCategory(res.category)

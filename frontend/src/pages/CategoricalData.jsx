@@ -8,7 +8,7 @@ const CategoricalData = () => {
     const {categoryName}=useParams()
     const [data, setData] = useState([]);
     const getData = async () => {
-      const res = await axios.get(`http://localhost:4000/blogs/category/${categoryName}`);
+      const res = await axios.get(`https://blogify-ioe8.onrender.com/blogs/category/${categoryName}`);
       setData(res?.data?.myblogs);
     };
   

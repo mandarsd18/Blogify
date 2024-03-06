@@ -17,7 +17,7 @@ const DetailPage = () => {
 
 
   const deleteItem = async(id) => {
-    await axios.delete(`http://localhost:4000/blogs/delete-blog/${id}`);
+    await axios.delete(`https://blogify-ioe8.onrender.com/blogs/delete-blog/${id}`);
     // setUiChange((prevState)=>!prevState)
     toast.success('Blog Deleted Successfully !!', {
       position: "top-right",

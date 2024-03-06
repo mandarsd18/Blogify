@@ -25,7 +25,7 @@ const CreateBlog = () => {
     try {
       if (userID) {
         const res = await axios
-          .post("http://localhost:4000/blogs/create-blog", {
+          .post("https://blogify-ioe8.onrender.com/blogs/create-blog", {
             title: title,
             description: description,
             category: category,

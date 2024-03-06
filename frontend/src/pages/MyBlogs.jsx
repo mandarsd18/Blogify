@@ -14,11 +14,11 @@ const MyBlogs = () => {
 
   const navigate=useNavigate()
   const getData = async () => {
-    const res = await axios.get(`http://localhost:4000/blogs/myblogs/${userID}`);
+    const res = await axios.get(`https://blogify-ioe8.onrender.com/blogs/myblogs/${userID}`);
     setData(res?.data?.myblogs);
   };
   const deleteItem = (id) => {
-    axios.delete(`http://localhost:4000/blogs/delete-blog/${id}`);
+    axios.delete(`https://blogify-ioe8.onrender.com/blogs/delete-blog/${id}`);
     setUiChange((prevState)=>!prevState)
     toast.success('Blog Deleted Successfully !!', {
       position: "top-right",
